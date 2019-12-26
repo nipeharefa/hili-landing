@@ -12,6 +12,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 const isProduction = ('production' === process.env.REACT_APP_ENV);
 
+console.log(isProduction);
+
 if (isProduction) {
     serviceWorker.register();
 }
