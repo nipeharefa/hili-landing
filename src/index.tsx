@@ -1,8 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
+import loadable from '@loadable/component';
+import './tailwind.css';
+import IndexPage from './App';
 import * as serviceWorker from './serviceWorker';
+
+
+const VisionAndMission = loadable(() => import('./pages/VisionAndMission'));
+
+const App = () => (
+  <Router>
+    <Switch>
+        <Route exact path="/">
+          <IndexPage />
+        </Route>
+        <Route exact path="/visi-misi">
+          <VisionAndMission />
+        </Route>
+        <Route path="*">
+          <p>Not Found</p>
+        </Route>
+    </Switch>
+  </Router>
+);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
