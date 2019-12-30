@@ -1,8 +1,7 @@
 import * as React from 'react';
 import loadable from '@loadable/component';
-import Navbar from '../component/Navbar';
 
-// const Navbar = loadable(() => import('../component/Navbar'));
+const Navbar = loadable(() => import('../component/Navbar'));
 
 const VisionAndMission = () => (
   <div className="flex items-center flex-col px-3">

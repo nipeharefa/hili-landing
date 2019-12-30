@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container : any  = styled.div`
   width: 480px;
   @media (max-width: 480px) {
     width: 100%;
