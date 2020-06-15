@@ -1,5 +1,6 @@
+require('dotenv').config();
 const config = {
-  serverRuntimeConfig: {
+  publicRuntimeConfig: {
     seoNoIndex: process.env.SEO_NOINDEX || true,
   },
 };

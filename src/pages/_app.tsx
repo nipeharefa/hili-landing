@@ -1,3 +1,5 @@
+import getConfig from 'next/config';
+
 import '../tailwind.css';
 
 interface PropsMyApp {
@@ -5,8 +7,12 @@ interface PropsMyApp {
   pageProps: any;
 }
 
+const { publicRuntimeConfig  } = getConfig();
+
 const MyApp = (props: PropsMyApp) =>  {
   const { Component, pageProps} = props;
+  let seo  = publicRuntimeConfig.seoNoIndex;
+  pageProps.seo = (seo === 'true');
   return (<Component {...pageProps} />);
 };
 
