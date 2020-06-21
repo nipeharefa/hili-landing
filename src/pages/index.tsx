@@ -8,7 +8,7 @@ const Index = (props: any) => {
       <NextSeo
         title="Gereja BNKP Hilihao"
         description="Selamat datang di website Gereja Banua Niha Keriso Protestan (BNKP) Hilihao"
-        noindex={props.seo}
+        noindex={!props.seo}
         openGraph={{
           type: "website",
           title: "Gereja BNKP Hilihao"
